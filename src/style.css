@@ -1,0 +1,90 @@
+/*Universal Style*/
+
+* {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+body {
+    background-color: #fffffbfa;
+
+}
+
+
+/* Nav Bar */
+
+header {
+    background-color: #fffffbfa;
+
+}
+
+
+
+/* How it works */
+
+.hiw-grid-raw {
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    gap: 70px;
+}
+
+
+/* Feature */
+
+.ft-grid-raw {
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    gap: 70px;
+}
+
+
+/* Pricing */
+.pr-raw {
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+}
+
+
+/* FAQ */
+details {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* Responsive Stuffs*/
+
+@media (min-width: 788px) {
+    .hiw-grid-raw {
+        grid-template-columns: auto auto;
+    }
+
+    .ft-grid-raw {
+        grid-template-columns: auto auto;
+    }
+
+    .pr-raw {
+        grid-template-columns: auto auto;
+    }
+}
+
+
+
+
+@media (min-width: 1140px) {
+    .hiw-grid-raw {
+        grid-template-columns: auto auto auto;
+
+    }
+
+    .pr-raw {
+        grid-template-columns: auto auto auto;
+    }
+
+}

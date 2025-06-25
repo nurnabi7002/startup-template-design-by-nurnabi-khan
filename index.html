@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StartUp</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/dist/output.css">
+  <!-- 
+    npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch
+    -->
+</head>
+<!--
+ https://startuptemplate.vercel.app/
+  -->
+
+<body>
+
+  <!-- Nav Bar -->
+  <header class="w-full h-[85px] flex justify-center items-center text-black font-extralightlo top-0 fixed z-10 ">
+    <nav class="flex justify-center items-center lg:gap-[360px] xl:gap-[600px] text-black " id="nav">
+
+      <!-- Img -- Logo-->
+      <img src="/images/Logo_black.svg" alt="Logo_black startup">
+
+      <!-- Nav Link -->
+
+      <ul class="lg:flex hidden gap-[25px]">
+        <li class="hover:underline" id="hit-btn">How it works</li>
+        <li class="hover:underline" id="ft-btn">Features</li>
+        <li class="hover:underline" id="pr-btn">Pricings</li>
+      </ul>
+
+      <!-- Nav Menu Button -->
+      <button id="nav-btn" class="text-black lg:hidden ml-[50vw] cursor-pointer" onclick="openMenu()">&#9776;</button>
+      <button id="menu-btn" class="text-black hidden ml-[50vw] cursor-pointer" onclick="closeMenu()">&#9776;</button>
+
+    </nav>
+  </header>
+
+  <!-- Side Bar -->
+  <div class="w-full h-[200px] text-center text-black mt-[80px] hidden duration-1000" id="menu">
+    <!-- Nav Link -->
+
+    <ul>
+
+      <li class="hover:underline">How it works</li> <br>
+      <li class="hover:underline">Features</li> <br>
+      <li class="hover:underline">Pricings</li> <br>
+    </ul>
+
+  </div>
+
+
+  <!-- Hero Section -->
+  <section class="flex justify-center items-center w-full mt-[100px]">
+    <div class="flex flex-col justify-center items-center p-5 gap-[60px] lg:flex-row ">
+      <!-- Summary -->
+      <div class="text-black ">
+
+        <h1 class="font-black text-5xl">
+          A headline for your <br> <span class="underline">cool website</span>
+        </h1> <br>
+
+        <p class="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Laborum harum tempore
+          consectetur voluptas, cumque nobis <br> laboriosam voluptatem.</p>
+
+        <br>
+
+        <div class="flex gap-[20px] flex-col sm:flex-row">
+          <a href="#">
+            <button
+              class=" px-[30px] py-[15px] border-2 transform scale-102 border-black  rounded-[7px] bg-black text-white">Call
+              to action</button> </a>
+
+          <a href="#">
+            <button class=" px-[30px] py-[15px] border-2 transform scale-102 border-black  rounded-[7px]">Secondary
+              action</button> </a>
+
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="flex flex-col  justify-center items-center ">
+        <!-- Img 1 -->
+        <img src="/images/Highlight1.svg" alt="Highlight1
+   " class="sm:mr-[450px] h-[30px] mr-[250px]  sm:h-auto">
+        <!-- Img 2 - Main -->
+        <img src="/images/MacBook Pro.png" alt="MacBook" class="h-[150px] sm:h-auto">
+
+        <!-- Img 3 -->
+        <img src="/images/Highlight2.svg" alt="Highlight2" class="sm:ml-[450px] h-[30px] ml-[250px] sm:h-auto">
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- How it is work -->
+  <section class="w-full bg-black text-white flex-col flex justify-center items-center" id="hit">
+    <h1 class="text-5xl text-center underline py-12">How it works</h1> <br>
+    <div class="p-[100px] hiw-grid-raw text-white ">
+
+      <!-- Card 1 -->
+      <div class="text-center flex justify-center items-center flex-col gap-[12px]">
+        <div
+          class="bg-white text-black p-4 font-bold text-xl w-[60px] h-[60px] flex justify-center items-center rounded-[50%]">
+          1</div>
+        <h2 class="text-3xl">Eat</h2>
+        <p class="text-xl">Lorem ipsum dolor, sit amet <br> consectetur adipisicing elit.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="text-center flex justify-center items-center flex-col gap-[12px]">
+        <div
+          class="bg-white text-black p-4 font-bold text-xl w-[60px] h-[60px] flex justify-center items-center rounded-[50%]">
+          2</div>
+        <h2 class="text-3xl">Sleep</h2>
+        <p class="text-xl">Lorem ipsum dolor, sit amet <br> consectetur adipisicing elit.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="text-center flex justify-center items-center flex-col gap-[12px]">
+        <div
+          class="bg-white text-black p-4 font-bold text-xl w-[60px] h-[60px] flex justify-center items-center rounded-[50%]">
+          3</div>
+        <h2 class="text-3xl">Walk</h2>
+        <p class="text-xl">Lorem ipsum dolor, sit amet <br> consectetur adipisicing elit.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Features -->
+  <section class="w-full text-black flex justify-center items-center flex-col" id="ft">
+    <h1 class="text-5xl text-center underline py-12">Features</h1> <br>
+    <div class="p-[10px] sm:p-[35px] ft-grid-raw text-white ">
+
+
+      <!-- Card 1 -->
+      <div>
+        <h1 class="text-black text-4xl font-bold">Feature #1</h1>
+        <br>
+        <p class="text-black text-2xl">Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Quisquam voluptate
+          praesentium <br> tenetur earum repellendus! Dicta culpa <br> consequuntur </p>
+
+      </div>
+
+
+      <!-- Card 2 -->
+      <div>
+        <h1 class="text-black text-4xl font-bold">Feature #2</h1>
+        <br>
+        <p class="text-black text-2xl">Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Quisquam voluptate
+          praesentium <br> tenetur earum repellendus! Dicta culpa <br> consequuntur </p>
+
+      </div>
+
+
+
+      <!-- Card 3 -->
+      <div>
+        <h1 class="text-black text-4xl font-bold">Feature #3</h1>
+        <br>
+        <p class="text-black text-2xl">Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Quisquam voluptate
+          praesentium <br> tenetur earum repellendus! Dicta culpa <br> consequuntur </p>
+
+      </div>
+
+
+      <!-- Card 4 -->
+      <div>
+        <h1 class="text-black text-4xl font-bold">Feature #4</h1>
+        <br>
+        <p class="text-black text-2xl">Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Quisquam voluptate
+          praesentium <br> tenetur earum repellendus! Dicta culpa <br> consequuntur </p>
+
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <!-- Pricing -->
+  <section class="w-full text-black flex flex-col justify-center items-center" id="pr">
+    <h1 class="text-5xl text-center underline py-12">Pricing</h1> <br>
+    <div class="p-[10px] sm:p-[35px] gap-[100px] pr-raw ">
+
+
+
+      <!-- Card 1 -->
+      <div
+        class="bg-white shadow-gray-400 shadow-2xl h-[300px] w-[280px] rounded-[40px] flex flex-col justify-center items-center gap-[10px] mt-[100px]">
+        <div class="flex flex-col gap-[15px]">
+          <h2 class="text-4xl font-medium">Basic</h2>
+          <span class="flex items-center">
+            <h2 class="text-2xl font-black">$10</h2> / month
+          </span>
+
+          <div class="flex gap-[5px]"><img src="/images/CheckedBox.svg" alt="CheckedBox"> Benefit #1</div>
+          <div class="flex gap-[5px]"><img src="/images/CheckedBox.svg" alt="CheckedBox"> Benefit #2</div>
+          <div class="flex gap-[5px]"><img src="/images/CheckedBox.svg" alt="CheckedBox"> Benefit #3</div>
+
+          <a href="#"><button class="border-2 px-[50px] py-[10px] rounded-[15px]">Choose Plan</button></a>
+        </div>
+      </div>
+
+
+
+
+      <!-- Card 2 -->
+      <div
+        class="bg-white shadow-gray-400 shadow-2xl h-[300px] w-[280px] rounded-[40px] flex flex-col justify-center items-center gap-[10px]">
+        <div class="flex flex-col gap-[15px]">
+          <h2 class="text-4xl font-medium">Popular</h2>
+          <span class="flex items-center">
+            <h2 class="text-2xl font-black">$25</h2> / month
+          </span>
+
+          <div class="flex gap-[5px]"><img src="/images/CheckedBox.svg" alt="CheckedBox"> Benefit #1</div>
+          <div class="flex gap-[5px]"><img src="/images/CheckedBox.svg" alt="CheckedBox"> Benefit #2</div>
+          <div class="flex gap-[5px]"><img src="/images/CheckedBox.svg" alt="CheckedBox"> Benefit #3</div>
+
+          <a href="#"><button class="border-2 px-[50px] py-[10px] rounded-[15px]">Choose Plan</button></a>
+        </div>
+      </div>
+
+
+      <!-- Card 3 -->
+      <div
+        class="bg-white shadow-gray-400 shadow-2xl h-[300px] w-[280px] rounded-[40px] flex flex-col justify-center items-center gap-[10px] mt-[100px]">
+        <div class="flex flex-col gap-[15px]">
+          <h2 class="text-4xl font-medium">Premium</h2>
+          <span class="flex items-center">
+            <h2 class="text-2xl font-black">$50</h2> / month
+          </span>
+
+          <div class="flex gap-[5px]"><img src="/images/CheckedBox.svg" alt="CheckedBox"> Benefit #1</div>
+          <div class="flex gap-[5px]"><img src="/images/CheckedBox.svg" alt="CheckedBox"> Benefit #2</div>
+          <div class="flex gap-[5px]"><img src="/images/CheckedBox.svg" alt="CheckedBox"> Benefit #3</div>
+
+          <a href="#"><button class="border-2 px-[50px] py-[10px] rounded-[15px]">Choose Plan</button></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="w-full flex justify-center items-center flex-col bg-black">
+    <br />
+    <h1 class="text-4xl text-white underline py-9">FAQ</h1> <br />
+    <div class="text-white flex flex-col gap-[40px] ">
+
+      <details>
+        <summary>Lorem ipsum dolor sit amet consectetur adipisicing elit?</summary>
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ratione modi magni dolorem libero
+          minima omnis.</p>
+      </details>
+
+      <details>
+        <summary>Lorem ipsum dolor sit amet consectetur adipisicing elit?</summary>
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ratione modi magni dolorem libero
+          minima omnis.</p>
+      </details>
+
+      <details>
+        <summary>Lorem ipsum dolor sit amet consectetur adipisicing elit?</summary>
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ratione modi magni dolorem libero
+          minima omnis.</p>
+      </details>
+
+      <details>
+        <summary>Lorem ipsum dolor sit amet consectetur adipisicing elit?</summary>
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ratione modi magni dolorem libero
+          minima omnis.</p>
+      </details>
+
+      <details>
+        <summary>Lorem ipsum dolor sit amet consectetur adipisicing elit?</summary>
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ratione modi magni dolorem libero
+          minima omnis.</p>
+      </details>
+
+      <details>
+        <summary>Lorem ipsum dolor sit amet consectetur adipisicing elit?</summary>
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ratione modi magni dolorem libero
+          minima omnis.</p>
+      </details>
+
+
+      <br> <br> <br> <br>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="w-full flex justify-center items-center bg-black text-center">
+    <div class="text-white ">
+      <!-- Logo -->
+      <img src="/images/Logo_white.svg" alt="Logo_white" class="ml-[75px]"> <br>
+      <!-- Link img -->
+      <div class="flex justify-center items-center gap-[25px]">
+        <a href="#"><img src="/images/Facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="/images/Youtube.svg" alt="Youtube"></a>
+        <a href="#"><img src="/images/Instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="/images/Twitter.svg" alt="Twitter"></a>
+      </div>
+      <br>
+      <p>© 2025 STARTUP. All rights reserved</p>
+      <br> <br> <br>
+    </div>
+
+  </footer>
+
+  <script src="/src/script.js"></script>
+</body>
+
+</html>
